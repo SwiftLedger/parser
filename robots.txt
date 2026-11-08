@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swiftledger.github.io/parser/sitemap-main.xml

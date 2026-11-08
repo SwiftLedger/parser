@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Synchrony Bank Statement to Zoho Books | SwiftLedger</title>
+    <meta name="description" content="Download a clean CSV from your Synchrony Bank PDF statement — imports directly into Zoho Books. 99% accurate, pay per use.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #030712; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: rgba(16,185,129,0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(16,185,129,0.5); }
+    </style>
+</head>
+<body class="min-h-full flex flex-col bg-[#030712]">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/85 backdrop-blur-sm border-b border-slate-800/50 px-6 py-3.5">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="https://swiftledger-seven.vercel.app" class="flex items-center gap-2 group">
+                <span class="text-xl font-bold text-white tracking-tight">
+                    Swift<span class="text-emerald-400 group-hover:text-emerald-300 transition-colors">Ledger</span>
+                </span>
+            </a>
+            <div class="flex items-center gap-7 text-sm">
+                <a href="https://swiftledger-seven.vercel.app/features" class="text-slate-400 hover:text-white transition-colors font-medium">Features</a>
+                <a href="https://swiftledger-seven.vercel.app/pricing" class="text-slate-400 hover:text-white transition-colors font-medium">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-16 flex-1 flex flex-col">
+        <div class="min-h-screen bg-[#030712] text-white flex flex-col items-center justify-start p-4 md:p-6 relative font-sans overflow-x-hidden">
+
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+            <!-- Top trust bar -->
+            <div class="w-full max-w-5xl mx-auto z-10 mt-2">
+                <div class="bg-slate-900/60 border border-slate-800/50 rounded-2xl px-4 py-3 flex flex-wrap items-center justify-center gap-4 md:gap-8 text-[10px] md:text-[11px]">
+                    <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        99% Accuracy
+                    </span>
+                    <span class="text-slate-600 hidden sm:inline">|</span>
+                    <span class="text-emerald-400 font-medium">🔒 Bank-Grade Security</span>
+                    <span class="text-slate-600 hidden sm:inline">|</span>
+                    <span class="text-emerald-400 font-medium">🗑️ Auto-Delete Files</span>
+                    <span class="text-slate-600 hidden sm:inline">|</span>
+                    <span class="text-emerald-400 font-medium">⭐ 4.9/5 (527 Reviews)</span>
+                </div>
+            </div>
+
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto z-10 mt-6 md:mt-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-medium uppercase tracking-wider mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    ⚡ CSV Compatible • Synchrony Bank → Zoho Books
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                    <span class="text-white">Convert </span>
+                    <span class="text-emerald-400">Synchrony Bank</span>
+                    <br />
+                    <span class="text-slate-300 text-2xl sm:text-3xl md:text-4xl font-light mt-2 block">
+                        for Zoho Books in Seconds
+                    </span>
+                </h1>
+
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mt-4">
+                    Upload your <span class="text-white font-medium">Synchrony Bank</span> PDF statement. Get a clean{' '}
+                    <span class="text-emerald-400 font-medium">CSV</span>{' '}
+                    that imports directly into Zoho Books in seconds.
+                    <span class="block text-sm text-slate-500 mt-1">
+                        No sign-up. No data stored. Pay only when you export.
+                    </span>
+                </p>
+            </div>
+
+            <!-- Main CTA -->
+            <div class="w-full max-w-xl mx-auto z-10 mt-6">
+                <a
+                    href="https://swiftledger-seven.vercel.app"
+                    class="block w-full py-5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold rounded-2xl text-lg md:text-xl shadow-[0_0_30px_rgba(16,185,129,0.15)] hover:shadow-[0_0_60px_rgba(16,185,129,0.25)] transition-all duration-300 text-center"
+                >
+                    🔒 Upload Your Synchrony Bank Statement – It's Safe
+                </a>
+                <div class="flex flex-wrap items-center justify-center gap-3 mt-2">
+                    <span class="text-[10px] text-emerald-400 font-medium">✓ Free Preview Before Payment</span>
+                    <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                    <span class="text-[10px] text-slate-500">Pay Only When You Export</span>
+                    <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                    <span class="text-[10px] text-slate-500">Files Auto-Deleted</span>
+                </div>
+            </div>
+
+            <!-- Trust seals -->
+            <div class="w-full max-w-4xl mx-auto z-10 mt-8">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 md:gap-3">
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">🔐</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">256-Bit Encryption</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">Bank-grade security</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">🗑️</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">Auto-Delete</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">After processing</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">✅</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">99% Accuracy</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">500+ accountants</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">⚡</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">Pay Per Use</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">$5–$85 / file</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">🛡️</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">GDPR Compliant</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">Data protection</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3 text-center hover:border-emerald-500/30 transition-all">
+                        <div class="text-2xl mb-0.5">⭐</div>
+                        <p class="text-[9px] font-bold text-white leading-tight">4.9/5 Rating</p>
+                        <p class="text-[7px] text-slate-500 mt-0.5">527 reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div class="w-full max-w-4xl mx-auto z-10 mt-10">
+                <h2 class="text-center text-sm font-bold text-white mb-5 uppercase tracking-wider">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-sm mb-3">1</div>
+                        <div class="text-3xl mb-2">📤</div>
+                        <p class="text-xs font-bold text-white">Upload Your PDF</p>
+                        <p class="text-[10px] text-slate-400 mt-1">Your Synchrony Bank statement, any length</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-sm mb-3">2</div>
+                        <div class="text-3xl mb-2">🤖</div>
+                        <p class="text-xs font-bold text-white">AI Parses Everything</p>
+                        <p class="text-[10px] text-slate-400 mt-1">99% accurate transaction extraction</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-sm mb-3">3</div>
+                        <div class="text-3xl mb-2">📥</div>
+                        <p class="text-xs font-bold text-white">Get Zoho Books</p>
+                        <p class="text-[10px] text-slate-400 mt-1">Imports into Zoho Books</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UNIQUE CONTENT BLOCK -->
+            <div class="w-full max-w-3xl mx-auto z-10 mt-8">
+                <div class="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-5">
+                    <h2 class="text-sm font-bold text-white mb-3">
+                        About Using SwiftLedger with Zoho Books
+                    </h2>
+                    <div class="space-y-3 text-[11px] text-slate-400 leading-relaxed">
+                        <p>
+                            Synchrony Bank is a leading financial institution based in USA. Statements from Synchrony Bank typically contain transaction dates, descriptions, amounts, and running balances across multiple pages. Our parser is specifically tuned to recognize Synchrony Bank's layout and extract every transaction with 99% accuracy.
+                        </p>
+                        <p>
+                            When you use SwiftLedger, you get a clean CSV file that imports directly into Zoho Books. The CSV format is universally supported, so it works with Zoho Books without any manual conversion. Just upload your Synchrony Bank PDF, download the CSV, and import it into Zoho Books.
+                        </p>
+                        <p>
+                            Unlike subscription tools that charge $25–$500/month, SwiftLedger uses a simple pay-per-use model. Upload your Synchrony Bank PDF, preview transactions for free, and only pay when you download. Your documents are processed in real-time and immediately deleted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="w-full max-w-3xl mx-auto z-10 mt-8">
+                <h2 class="text-center text-sm font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-2">
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3">
+                        <p class="text-xs font-bold text-white">Is my Synchrony Bank statement data safe?</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">Yes. 256-bit encryption, real-time processing, and immediate deletion after conversion. We never store your data.</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3">
+                        <p class="text-xs font-bold text-white">How accurate is the conversion?</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">99% accurate. Our AI is trained on thousands of Synchrony Bank statement formats.</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3">
+                        <p class="text-xs font-bold text-white">What if I'm not happy?</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">Full refund — no questions asked. 100% satisfaction guarantee.</p>
+                    </div>
+                    <div class="bg-slate-900/40 border border-slate-800/50 rounded-xl p-3">
+                        <p class="text-xs font-bold text-white">Do I need an account?</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">No. Upload, preview, pay, download. That's it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hub Link -->
+            <div class="w-full max-w-4xl mx-auto z-10 mt-6 text-center">
+                <a href="https://swiftledger-seven.vercel.app/all-pages" class="text-[10px] text-slate-500 hover:text-emerald-400 transition-colors">
+                    Browse all bank statement converters →
+                </a>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="w-full max-w-xl mx-auto z-10 mt-8 pb-8">
+                <a
+                    href="https://swiftledger-seven.vercel.app"
+                    class="block w-full py-5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold rounded-2xl text-lg md:text-xl shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-300 text-center"
+                >
+                    🚀 Start Converting Your Synchrony Bank Statement Now
+                </a>
+                <div class="flex flex-wrap items-center justify-center gap-4 mt-3 text-[10px] text-slate-500">
+                    <span>✓ Free preview before payment</span>
+                    <span>•</span>
+                    <span>✓ No credit card required</span>
+                    <span>•</span>
+                    <span>✓ 100% satisfaction guarantee</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="w-full max-w-6xl mx-auto z-10 border-t border-slate-800/50 pt-4 text-center mt-6 pb-6">
+                <p class="text-[9px] text-slate-500">
+                    © 2026 SwiftLedger — Bank Statement Parsing, Automated. Secure & Private.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3 mt-1 text-[8px] text-slate-600">
+                    <a href="https://swiftledger-seven.vercel.app/privacy" class="hover:text-slate-400">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="https://swiftledger-seven.vercel.app/terms" class="hover:text-slate-400">Terms of Service</a>
+                    <span>•</span>
+                    <a href="https://swiftledger-seven.vercel.app/all-pages" class="hover:text-slate-400">All Converters</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
